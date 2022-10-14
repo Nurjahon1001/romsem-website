@@ -56,11 +56,11 @@ function sidebar() {
             </div>
             <div className={'flex justify-center gap-5 pb-7'}>
                <img src={Napitki} alt="pizza" />
-               <p className='xl:text-2xl lg:text-xl text-base font-normal'>Napitki</p>
+               <p className='xl:text-2xl lg:text-xl text-base font-normal'>Напитки</p>
             </div>
             <div className={'flex justify-center gap-5 pb-7'}>
                <img src={Aksii} alt="pizza" />
-               <p className='xl:text-2xl lg:text-xl text-base font-normal'>Aksii</p>
+               <p className='xl:text-2xl lg:text-xl text-base font-normal'>Акции</p>
             </div>
          </div>
       </div>
