@@ -8,11 +8,14 @@ import rightArrow from '../../images/desktop/desktop-goods-card/rightArrow.png'
 import smallLine from '../../images/desktop/desktop-goods-card/shortLine.png'
 import Button from '../../components/Button'
 import Goodscard_Cards from './Goodscard_Cards';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
 
 const GoodsCard = () => {
    return (
       <div className='w-[65%] mx-auto bg-gray'>
-         <div className='flex justify-between my-3 w-[90%] mx-auto'>
+         <Navbar/>
+         <div className='flex justify-between mt-5 w-[90%] mx-auto'>
             <Link to="/goods">
                <div className='flex gap-2 items-center'>
                   <img src={leftArrow} alt="leftArrow" />
@@ -42,6 +45,7 @@ const GoodsCard = () => {
             </div>
          </div>
          <Goodscard_Cards />
+         <Footer/>
       </div>
    );
 }

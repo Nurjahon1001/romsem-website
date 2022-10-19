@@ -1,8 +1,7 @@
 import React from 'react'
-import {Link} from 'react-dom'
 import Sidebar from '../../components/Sidebar'
-import ThirdCol from '../main_page/ThirdCol'
-import ReviewMain from './ReviewMain'
+import ThirdCol from '../mainPage/ThirdCol'
+import ReviewMain from './ReviewMainSection'
 
 
 export default function Goods() {

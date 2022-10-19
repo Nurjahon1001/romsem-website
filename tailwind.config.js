@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'mobile': {'max': '640px'}
+      },
     },
   },
   plugins: [],

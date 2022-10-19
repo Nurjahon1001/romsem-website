@@ -14,7 +14,7 @@ const Text = () => {
             </ul>
             В меню также представлены гунканы: с начинкой из красной икры и тобико, а также феликсы, где японский майонез сочетается с рыбой, морепродуктами, угрем. Любители острых блюд могут купить суши с соусом спайси. Популярные начинки — копченая курица, снежный краб, креветки, гребешки, тунец, лосось и окунь.</p>
             <div className='flex items-center justify-center gap-2 my-3'>
-               <p className='text-orange-500'>Подробнее</p>
+               <p className='2xl:text-xl text-base text-orange-500 font-medium'>Подробнее</p>
                <img src={arrowDown} alt="arrowDown" />
             </div>
       </div>
