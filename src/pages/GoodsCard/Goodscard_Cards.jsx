@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -13,7 +13,7 @@ import FirstCard from "./FirstCard";
 import SecondCard from "./SecondCard";
 import ThirdCard from "./ThirdCard";
 
-export default function Goodscard_Cards() {
+export default function GoodscardCards() {
    return (
       <div className="w-[85%] mx-auto mb-10">
          <p className="2xl:text-2xl text-xl font-medium text-center my-4">Рекомендуем к этому товару</p>

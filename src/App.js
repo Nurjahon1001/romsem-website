@@ -1,12 +1,12 @@
-import { useContext, useState, React, createContext } from "react";
+import { React } from "react";
 import { ThemeContext } from './contextUI'
 import useLocalStorage from "./hooks/useLocalStorage";
-import { BrowserRouter as Router, Routes, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Goods from "./pages/goods/Goods";
 import MainPage from "./pages/mainPage/mainPage";
-import GoodsCard from './pages/goodsCard/GoodsCard'
+import GoodsCards from './pages/goodsCard/GoodsCards'
 import Review from './pages/review/Review'
-import OformeleniyaZakaza from './pages/orderRegistration/orderRegistration'
+import OrderRegistration from './pages/orderRegistration/orderRegistration'
 
 // card images
 
@@ -23,7 +23,6 @@ import img9 from './images/desktop/desktop-goods/9.png'
 function App() {
   const [isShowBasket, setIsShowBasket] = useLocalStorage(true);
   const [cart, setCart] = useLocalStorage("carts", []);
-  const [filter, setFilter] = useLocalStorage("filters", []);
   const [products, setProducts] = useLocalStorage("products", [
     { id: 1, img: img1, title: "Филадельфия и лосось", weight: "1260", slice: "28", price: 1150 },
     { id: 2, img: img2, title: "Сет '5 Филадельфий'", weight: "1272", slice: "36", price: 1499 },
@@ -80,9 +79,9 @@ function App() {
             <Routes>
               <Route path="/" element={<MainPage />}></Route>
               <Route path="/goods" element={<Goods />}></Route>
-              <Route path="/cards" element={<GoodsCard />}></Route>
+              <Route path="/cards" element={<GoodsCards />}></Route>
               <Route path="/review" element={<Review />}></Route>
-              <Route path="/zakaz" element={<OformeleniyaZakaza />}></Route>
+              <Route path="/order" element={<OrderRegistration />}></Route>
             </Routes>
           </Router>
         </ThemeContext.Provider>

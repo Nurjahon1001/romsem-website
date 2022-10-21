@@ -3,7 +3,7 @@ import FirstImage from '../images/mobile/Rectangle 16.png'
 import Vector from '../images/mobile/Vector 11.svg'
 import Plus from '../images/mobile/Group 15.png'
 
-function Korzina() {
+function Basket() {
     return (
         <div className='lg:h-screen flex flex-col justify-between' style={{ paddingRight: '74px' }}>
             <div className='hidden lg:block' style={{ paddingTop: '59px', paddingLeft: '66px' }}>
@@ -65,4 +65,4 @@ function Korzina() {
     )
 }
 
-export default Korzina;
+export default Basket;

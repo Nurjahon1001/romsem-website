@@ -1,17 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-
 import goodsCardImg from '../../images/desktop/desktop-goods-card/goodsCard.png'
 import smallPlus from '../../images/desktop/desktop-goods-card/smallPlus.png'
 import leftArrow from '../../images/desktop/desktop-goods-card/leftArrow.png'
 import rightArrow from '../../images/desktop/desktop-goods-card/rightArrow.png'
 import smallLine from '../../images/desktop/desktop-goods-card/shortLine.png'
 import Button from '../../components/Button'
-import Goodscard_Cards from './Goodscard_Cards';
+import GoodscardCards from './GoodsCards';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
-const GoodsCard = () => {
+const GoodsCards = () => {
    return (
       <div className='w-[65%] mx-auto bg-gray'>
          <Navbar/>
@@ -44,10 +43,10 @@ const GoodsCard = () => {
                <Button classes={'px-12 py-1'} />
             </div>
          </div>
-         <Goodscard_Cards />
+         <GoodscardCards />
          <Footer/>
       </div>
    );
 }
 
-export default GoodsCard;
+export default GoodsCards;

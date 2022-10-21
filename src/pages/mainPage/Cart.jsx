@@ -4,15 +4,8 @@ import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { AiOutlineMinusCircle } from 'react-icons/ai';
 import { AiFillPlusCircle } from 'react-icons/ai';
 
-
-
 function Cart() {
-   const { cart, isShowBasket, setIsShowBasket, handleAddToCart, handleRemoveFromCart } = useContext(ThemeContext)
-   // const total = (arr) => {
-   //    return arr.reduce((cal, item) => {
-   //       return cal + (item.price * item);
-   //    }, 0)
-   // }
+   const { cart, setIsShowBasket, handleAddToCart, handleRemoveFromCart } = useContext(ThemeContext)
 
    return (
       <div className='w-full fixed inset-0 bg-[rgba(0,0,0,0.7)]' onClick={() => setIsShowBasket(false)}>
@@ -38,7 +31,10 @@ function Cart() {
                            <img className='w-full' src={item.img} alt={item.title} />
                         </div>
                         <p className='text-2xl font-bold text-black'>{item.title}</p>
-                        <p className='text-lg'>{item.slice}</p>
+                        <div className='flex gap-3'>
+                           <p className='2xl:text-lg text-xs text-gray-400 pt-1 pb-3'>{item.weight} грамм</p>
+                           <p className='2xl:text-lg text-xs text-gray-400 pt-1 pb-3'>{item.slice} кусочков</p>
+                        </div>
                         <p className='text-white font-bold w-7 h-7 rounded-full bg-orange-500 mt-1'>{item.amount}</p>
 
                         <div className="flex items-center my-3">

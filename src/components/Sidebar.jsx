@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import Logo from '../images/desktop/desktop-home-page/Logo.svg'
 import Line from '../images/desktop/desktop-home-page/line.png'
@@ -16,53 +16,54 @@ import Aksii from '../images/desktop/desktop-home-page/aksii.png'
 
 function sidebar() {
    return (
-      <div className='2xl:w-[15%] lg:w-[12%] md:w-[16%] w-[20%] flex flex-col items-center mt-6 text-center'>
-         <div className='flex flex-col items-center 2xl:w-[100%] lg:w-[70%]'>
-            <a href="#">
-               <img src={Logo} alt="Romsem_logo" />
-            </a>
+      <div className='2xl:w-[10%] lg:w-[12%] md:w-[16%] w-[20%] flex flex-col items-center mt-6 text-center'>
+         <div className='flex flex-col items-center w-[100%]'>
+            <Link to="/">
+               <img src={Logo} alt="Logo" />
+            </Link>
             <img className='2xl:py-7 lg:py-4' src={Line} alt="line" />
          </div>
          <div className='flex flex-col justify-end items-start'>
-            <div className={'flex justify-center 2xl:gap-5 gap-3 2xl:pb-7 pb-3'}>
+            <div className={'sidebarLinkDiv'}>
                <img src={Pizza} alt="pizza" />
-               <a className='2xl:text-2xl text-base font-normal'>Пицца</a>
+               <Link to="/" className='sidebarLink'>Пицца</Link>
             </div>
-            <div className={'flex justify-center 2xl:gap-5 gap-3 2xl:pb-7 pb-3'}>
+            <div className={'sidebarLinkDiv'}>
                <img src={Seti} alt="Seti" />
-               <Link to="/goods"><span className='2xl:text-2xl text-base font-normal'>Сеты</span></Link>
+               <Link to="/goods" className='sidebarLink'>Сеты</Link>
+               <Link to="/"><span className='sidebarLink'></span></Link>
             </div>
-            <div className={'flex justify-center 2xl:gap-5 gap-3 2xl:pb-7 pb-3'}>
+            <div className={'sidebarLinkDiv'}>
                <img src={WOK} alt="pizza" />
-               <a className='2xl:text-2xl text-base font-normal'>WOK</a>
+               <Link to="/" className='sidebarLink'>WOK</Link>
             </div>
-            <div className={'flex justify-center 2xl:gap-5 gap-3 2xl:pb-7 pb-3'}>
+            <div className={'sidebarLinkDiv'}>
                <img src={Roli} alt="pizza" />
-               <a className='2xl:text-2xl text-base font-normal'>Роллы</a>
+               <Link to="/" className='sidebarLink'>Роллы</Link>
             </div>
-            <div className={'flex justify-center 2xl:gap-5 gap-3 2xl:pb-7 pb-3'}>
+            <div className={'sidebarLinkDiv'}>
                <img src={Sushi} alt="pizza" />
-               <a className='2xl:text-2xl text-base font-normal'>Суши</a>
+               <Link to="/" className='sidebarLink'>Суши</Link>
             </div>
-            <div className={'flex justify-center 2xl:gap-5 gap-3 2xl:pb-7 pb-3'}>
+            <div className={'sidebarLinkDiv'}>
                <img src={Salati} alt="pizza" />
-               <a className='2xl:text-2xl text-base font-normal'>Салаты</a>
+               <Link to="/" className='sidebarLink'>Салаты</Link>
             </div>
-            <div className={'flex justify-center 2xl:gap-5 gap-3 2xl:pb-7 pb-3'}>
+            <div className={'sidebarLinkDiv'}>
                <img src={Supi} alt="pizza" />
-               <a className='2xl:text-2xl text-base font-normal'>Супы</a>
+               <Link to="/" className='sidebarLink'>Супы</Link>
             </div>
-            <div className={'flex justify-center 2xl:gap-5 gap-3 2xl:pb-7 pb-3'}>
+            <div className={'sidebarLinkDiv'}>
                <img src={Korn_dogi} alt="pizza" />
-               <a className='2xl:text-2xl text-base font-normal'>Корн доги</a>
+               <Link to="/" className='sidebarLink'>Корн доги</Link>
             </div>
-            <div className={'flex justify-center 2xl:gap-5 gap-3 2xl:pb-7 pb-3'}>
+            <div className={'sidebarLinkDiv'}>
                <img src={Napitki} alt="pizza" />
-               <a className='2xl:text-2xl text-base font-normal'>Напитки</a>
+               <Link to="/" className='sidebarLink'>Напитки</Link>
             </div>
-            <div className={'flex justify-center 2xl:gap-5 gap-3 2xl:pb-7 pb-3'}>
+            <div className={'sidebarLinkDiv'}>
                <img src={Aksii} alt="pizza" />
-               <a className='2xl:text-2xl text-base font-normal'>Акции</a>
+               <Link to="/" className='sidebarLink'>Акции</Link>
             </div>
          </div>
       </div>

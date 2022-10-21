@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .sidebarLink{
+    @apply 2xl:text-2xl text-base font-normal
+  }
+
+  .sidebarLinkDiv{
+    @apply flex justify-center 2xl:gap-5 gap-3 2xl:pb-7 pb-3
+  }
+}
+
+html{
+  scroll-behavior: smooth;
+}
 
 .wrapper {
   max-width: 96%;

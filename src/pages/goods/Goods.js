@@ -7,7 +7,7 @@ import ThirdCol from '../mainPage/ThirdCol'
 
 
 export default function Goods() {
-  const { cart, isShowBasket, setIsShowBasket, handleAddToCart } = useContext(ThemeContext)
+  const { isShowBasket } = useContext(ThemeContext)
 
   return (
     <div className='flex'>

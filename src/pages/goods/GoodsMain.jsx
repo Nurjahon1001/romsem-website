@@ -1,5 +1,4 @@
-import React, { useContext, useState } from 'react'
-import useLocalStorage from "../../hooks/useLocalStorage";
+import React, { useContext } from 'react'
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { BsChevronDown } from 'react-icons/bs'
 import { ThemeContext } from '../../contextUI'
@@ -11,17 +10,16 @@ import Button from '../../components/Button';
 
 const GoodsMain = () => {
    const {defaultProducts, products, setProducts, cart, handleAddToCart, setIsShowBasket } = useContext(ThemeContext)
-   const [filteredCards, setFilteredCards] = useState([])
    let newArray = []
    let sortedCards = []
 
    function filterByTitle(arr) {
       arr.map(item => {
          newArray.push(item.title)
-         newArray.sort()
+         return(newArray.sort())
       })
       for (let i = 0; i < newArray.length; i++) {
-         sortedCards.push(arr.find(item => item.title == newArray[i]))
+         sortedCards.push(arr.find(item => item.title === newArray[i]))
       }
       setProducts(sortedCards)
    }
@@ -34,10 +32,10 @@ const GoodsMain = () => {
    function decendingFilter(arr) {
       arr.map(item => {
          numArray.push(item.price)
-         numArray.sort(compareNumbers)
+         return(numArray.sort(compareNumbers))
       })
       for (let i = 0; i < numArray.length; i++) {
-         sortedByLowPrice.push(arr.find(item => item.price == numArray[i]))
+         sortedByLowPrice.push(arr.find(item => item.price === numArray[i]))
       }
       setProducts(sortedByLowPrice);
    }
@@ -48,10 +46,10 @@ const GoodsMain = () => {
    function ascendingFilter(arr) {
       arr.map(item => {
          numArray2.push(item.price)
-         numArray2.sort(compareFn)
+         return(numArray2.sort(compareFn))
       })
       for (let i = 0; i < numArray2.length; i++) {
-         sortedByHighPrice.push(arr.find(item => item.price == numArray2[i]))
+         sortedByHighPrice.push(arr.find(item => item.price === numArray2[i]))
       }
       setProducts(sortedByHighPrice);
    }
@@ -61,10 +59,10 @@ const GoodsMain = () => {
    function filterBySlice(arr) {
       arr.map(item => {
          slicesArray.push(item.slice)
-         slicesArray.sort(compareNumbers)
+         return(slicesArray.sort(compareNumbers))
       })
       for (let i = 0; i < slicesArray.length; i++) {
-         sortedBySlice.push(arr.find(item => item.slice == slicesArray[i]))
+         sortedBySlice.push(arr.find(item => item.slice === slicesArray[i]))
       }
       setProducts(sortedBySlice);
    }
