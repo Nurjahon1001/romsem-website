@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import {Link} from 'react-router-dom'
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { BsChevronDown } from 'react-icons/bs'
 import { ThemeContext } from '../../contextUI'
@@ -110,7 +111,7 @@ const GoodsMain = () => {
                   return (
                      <div key={product.id} className='bg-white p-2 max-w-[31%] flex flex-col justify-between'>
                         <img className='w-full' src={product.img} alt="meal" />
-                        <p className='2xl:text-2xl text-base font-medium '>{product.title}</p>
+                        <Link to="/cards" className='2xl:text-2xl text-base font-medium'>{product.title}</Link>
                         <div className='flex gap-3'>
                            <p className='2xl:text-lg text-xs text-gray-400 pt-1 pb-3'>{product.weight} грамм</p>
                            <p className='2xl:text-lg text-xs text-gray-400 pt-1 pb-3'>{product.slice} кусочков</p>

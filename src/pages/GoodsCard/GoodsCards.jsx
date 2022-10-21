@@ -6,7 +6,7 @@ import leftArrow from '../../images/desktop/desktop-goods-card/leftArrow.png'
 import rightArrow from '../../images/desktop/desktop-goods-card/rightArrow.png'
 import smallLine from '../../images/desktop/desktop-goods-card/shortLine.png'
 import Button from '../../components/Button'
-import GoodscardCards from './GoodsCards';
+import DetailedPageCards from './DetailedPageCards';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
@@ -43,7 +43,7 @@ const GoodsCards = () => {
                <Button classes={'px-12 py-1'} />
             </div>
          </div>
-         <GoodscardCards />
+         <DetailedPageCards />
          <Footer/>
       </div>
    );
