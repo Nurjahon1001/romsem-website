@@ -1,6 +1,6 @@
 import React, { useContext }  from 'react'
 import { ThemeContext } from '../../contextUI'
-import Basket from '../mainPage/Basket'
+import Cart from '../mainPage/Cart'
 import Sidebar from '../../components/Sidebar'
 import GoodsMain from './GoodsMain'
 import ThirdCol from '../mainPage/ThirdCol'
@@ -14,7 +14,7 @@ export default function Goods() {
       <Sidebar />
       <GoodsMain/>
       <ThirdCol/>
-      {isShowBasket ? <Basket/> : ""}      
+      {isShowBasket ? <Cart/> : ""}      
 
     </div>
   )

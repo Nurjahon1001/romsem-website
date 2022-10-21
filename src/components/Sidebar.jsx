@@ -30,7 +30,7 @@ function sidebar() {
             </div>
             <div className={'flex justify-center 2xl:gap-5 gap-3 2xl:pb-7 pb-3'}>
                <img src={Seti} alt="Seti" />
-               <Link to="/goods"><a className='2xl:text-2xl text-base font-normal'>Сеты</a></Link>
+               <Link to="/goods"><span className='2xl:text-2xl text-base font-normal'>Сеты</span></Link>
             </div>
             <div className={'flex justify-center 2xl:gap-5 gap-3 2xl:pb-7 pb-3'}>
                <img src={WOK} alt="pizza" />

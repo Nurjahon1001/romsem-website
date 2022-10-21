@@ -1,36 +1,78 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import useLocalStorage from "../../hooks/useLocalStorage";
 import { AiOutlineShoppingCart } from 'react-icons/ai';
+import { BsChevronDown } from 'react-icons/bs'
 import { ThemeContext } from '../../contextUI'
 import setiGoods from '../../images/desktop/desktop-goods/goodsSeti.png'
-import img1 from '../../images/desktop/desktop-goods/img1.png'
-import img2 from '../../images/desktop/desktop-goods/2.png'
-import img3 from '../../images/desktop/desktop-goods/3.png'
-import img4 from '../../images/desktop/desktop-goods/4.png'
-import img5 from '../../images/desktop/desktop-goods/5.png'
-import img6 from '../../images/desktop/desktop-goods/6.png'
-import img7 from '../../images/desktop/desktop-goods/7.png'
-import img8 from '../../images/desktop/desktop-goods/10.png'
-import img9 from '../../images/desktop/desktop-goods/9.png'
-import Button from '../../components/Button'
 import Text from '../../pages/mainPage/Text'
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import Button from '../../components/Button';
 
 const GoodsMain = () => {
-   const { cart, handleAddToCart, setIsShowBasket } = useContext(ThemeContext)
-   const [products, setProducts] = useLocalStorage("products", [
-      { id: 1, img: img1, title: "Филадельфия и лосось", slice: "1260 грамм, 28 кусочков", price: 1150 },
-      { id: 2, img: img2, title: "Сет '5 Филадельфий'", slice: "1272 грамм, 36 кусочков", price: 1499 },
-      { id: 3, img: img3, title: "Саломон сет", slice: "1189 грамм, 30 кусочков", price: 1499 },
-      { id: 4, img: img4, title: "Самая большая Филадельфия", slice: "1023 грамм, 24 кусочков", price: 1559 },
-      { id: 5, img: img5, title: "Камикадзе сет", slice: "1412 грамм, 32 кусочков", price: 1519 },
-      { id: 6, img: img6, title: "Топовый сет", slice: "1499 грамм, 40 кусочков", price: 1469 },
-      { id: 7, img: img7, title: "Банзай", slice: "1982 грамм, 29 кусочков", price: 1559 },
-      { id: 8, img: img8, title: "Аригато", slice: "1277 грамм, 33 кусочков", price: 1479 },
-      { id: 9, img: img9, title: "Якудза сет", slice: "1168 грамм, 19 кусочков", price: 1499 }
-   ])
+   const {defaultProducts, products, setProducts, cart, handleAddToCart, setIsShowBasket } = useContext(ThemeContext)
+   const [filteredCards, setFilteredCards] = useState([])
+   let newArray = []
+   let sortedCards = []
 
+   function filterByTitle(arr) {
+      arr.map(item => {
+         newArray.push(item.title)
+         newArray.sort()
+      })
+      for (let i = 0; i < newArray.length; i++) {
+         sortedCards.push(arr.find(item => item.title == newArray[i]))
+      }
+      setProducts(sortedCards)
+   }
+
+   function compareNumbers(a, b) {
+      return a - b;
+   }
+   let numArray = []
+   let sortedByLowPrice = []
+   function decendingFilter(arr) {
+      arr.map(item => {
+         numArray.push(item.price)
+         numArray.sort(compareNumbers)
+      })
+      for (let i = 0; i < numArray.length; i++) {
+         sortedByLowPrice.push(arr.find(item => item.price == numArray[i]))
+      }
+      setProducts(sortedByLowPrice);
+   }
+
+   const compareFn = (a, b) => a > b ? -1 : 0;
+   let numArray2 = []
+   let sortedByHighPrice = []
+   function ascendingFilter(arr) {
+      arr.map(item => {
+         numArray2.push(item.price)
+         numArray2.sort(compareFn)
+      })
+      for (let i = 0; i < numArray2.length; i++) {
+         sortedByHighPrice.push(arr.find(item => item.price == numArray2[i]))
+      }
+      setProducts(sortedByHighPrice);
+   }
+
+   let slicesArray = []
+   let sortedBySlice= []
+   function filterBySlice(arr) {
+      arr.map(item => {
+         slicesArray.push(item.slice)
+         slicesArray.sort(compareNumbers)
+      })
+      for (let i = 0; i < slicesArray.length; i++) {
+         sortedBySlice.push(arr.find(item => item.slice == slicesArray[i]))
+      }
+      setProducts(sortedBySlice);
+   }
+
+  function returnDefaultProducts(arr){
+   setProducts(arr)
+  }
+   
    return (
       <div className='w-[65%] mx-auto bg-gray'>
          <Navbar />
@@ -40,34 +82,53 @@ const GoodsMain = () => {
                   <img src={setiGoods} alt="settings" />
                   <p className='lg:text-2xl text-lg font-medium'>Сеты</p>
                </div>
-               <div className="flex gap-2" onClick={() => setIsShowBasket(true)} style={{ background: '#f2f2f2', borderRadius: '5px' }}>
-                  <AiOutlineShoppingCart className="text-[40px] cursor-pointer hover:text-orange-500" />
-                  {cart.length > 0 && (
-                     <span className="bg-orange-500 text-white w-7 h-7 grid items-center rounded-full -translate-y-3 -translate-x-6 text-center leading-5 ">
-                        {cart.length}
-                     </span>
-                  )}
+               <div className='flex items-center gap-3'>
+                  <div className='primary-navigation'>
+                     <ul>
+                        <li><span className="flex gap-4 items-center font-semibold text-xl">Сортировка <BsChevronDown /></span>
+                           <ul className="dropdown">
+                              <li onClick={() => returnDefaultProducts(defaultProducts)}>По умолчанию</li>
+                              <li onClick={() => filterByTitle(products)}>Название</li>
+                              <li onClick={() => decendingFilter(products)}>Сначала дешевле</li>
+                              <li onClick={() => ascendingFilter(products)}>Сначала дороже</li>
+                              <li onClick={() => filterBySlice(products)}>Количество кусочков</li>
+                              <li onClick={() => returnDefaultProducts(defaultProducts)}>Вес</li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+                  <div className="flex gap-2" onClick={() => setIsShowBasket(true)} style={{ background: '#f2f2f2', borderRadius: '5px' }}>
+                     <AiOutlineShoppingCart className="text-[40px] cursor-pointer hover:text-orange-500" />
+                     {cart.length > 0 && (
+                        <span className="bg-orange-500 text-white w-7 h-7 grid items-center rounded-full -translate-y-3 -translate-x-6 text-center leading-5 ">
+                           {cart.length}
+                        </span>
+                     )}
+                  </div>
                </div>
             </div>
             <div className='flex flex-wrap gap-y-5 justify-between'>
-               {products.map((card, index) => {
+               {products.map((product) => {
                   return (
-                     <div key={card.id} className='bg-white p-2 w-[31%]'>
-                        <img src={card.img} alt="meal" />
-                        <p className='2xl:text-2xl text-base font-medium pt-3'>{card.title}</p>
-                        <p className='2xl:text-lg text-xs text-gray-400 pt-1 pb-3'>{card.slice}</p>
+                     <div key={product.id} className='bg-white p-2 max-w-[31%] flex flex-col justify-between'>
+                        <img className='w-full' src={product.img} alt="meal" />
+                        <p className='2xl:text-2xl text-base font-medium '>{product.title}</p>
+                        <div className='flex gap-3'>
+                           <p className='2xl:text-lg text-xs text-gray-400 pt-1 pb-3'>{product.weight} грамм</p>
+                           <p className='2xl:text-lg text-xs text-gray-400 pt-1 pb-3'>{product.slice} кусочков</p>
+                        </div>
                         <div className='flex gap-2 justify-between items-center border-t-2 py-2'>
-                           <p className='2xl:text-2xl text-lg font-bold'>{card.price}</p>
-                           <Button classes={"py-1 2xl:px-10 px-6"} func={() => handleAddToCart(card)} />
+                           <p className='2xl:text-2xl text-lg font-bold'>{product.price}</p>
+                           <Button classes={"py-1 2xl:px-10 px-6"} func={() => handleAddToCart(product)} />
                         </div>
                      </div>
                   )
                })}
             </div>
-         </div>
+         </div >
          <Text />
          <Footer />
-      </div>
+      </div >
    );
 }
 
