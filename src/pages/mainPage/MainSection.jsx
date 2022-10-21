@@ -9,88 +9,49 @@ import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 import Button from "../../components/Button";
 
 export default function MainSection() {
+
+   const [sliders, setSliders] = useState([
+      { id: 1, img: main_bg, title: "Филадельфия и лосось", slice: "1260 грамм 36 кусочек", price: "1599 СОМ", sale: "599 СОМ" },
+      { id: 2, img: main_bg, title: "Филадельфия и лосось", slice: "1260 грамм 36 кусочек", price: "1599 СОМ", sale: "599 СОМ" },
+      { id: 3, img: main_bg, title: "Филадельфия и лосось", slice: "1260 грамм 36 кусочек", price: "1599 СОМ", sale: "599 СОМ" },
+      { id: 4, img: main_bg, title: "Филадельфия и лосось", slice: "1260 грамм 36 кусочек", price: "1599 СОМ", sale: "599 СОМ" },
+      { id: 5, img: main_bg, title: "Филадельфия и лосось", slice: "1260 грамм 36 кусочек", price: "1599 СОМ", sale: "599 СОМ" },
+      { id: 6, img: main_bg, title: "Филадельфия и лосось", slice: "1260 грамм 36 кусочек", price: "1599 СОМ", sale: "599 СОМ" },
+   ])
+
    return (
       <Swiper
          cssMode={true}
          navigation={true}
          pagination={{
             clickable: true,
-          }}
+         }}
          mousewheel={true}
          keyboard={true}
          modules={[Navigation, Pagination, Mousewheel, Keyboard]}
          className="mySwiper bg-white mt-5"
       >
-         <SwiperSlide>
-            <div
-               className='flex flex-col items-end h-[50vh] w-[88%] bg-no-repeat bg-contain mx-auto mt-5'
-               style={{
-                  backgroundImage: `url(${main_bg})`
-               }}>
-               <i className='text-2xl font-medium'>"Филадельфия и лосось"</i>
-               <p className="2xl:text-sm text-xs text-orange-500">1260 грамм 36 кусочек </p>
-
-               <p className="pt-16 font-medium"><p className="block w-[110%] h-[8%] bg-orange-500 translate-y-4 -rotate-12"></p> 1599 СОМ</p>
-               <p className="text-2xl pt-1 pb-14 font-bold">599 СОМ</p>
-               <Button classes={'px-14'} />
-            </div>
-         </SwiperSlide>
-         <SwiperSlide>
-            <div
-               className='flex flex-col items-end h-[50vh] w-[88%] bg-no-repeat bg-contain mx-auto  mt-5'
-               style={{
-                  backgroundImage: `url(${main_bg})`
-               }}>
-               <i className='text-2xl font-medium'>"Филадельфия и лосось"</i>
-               <p className="2xl:text-sm text-xs text-orange-500">1260 грамм 36 кусочек </p>
-
-               <p className="pt-16 font-medium"><span className="block w-[110%] h-[8%] bg-orange-500 translate-y-4 -rotate-12"></span> 1599 СОМ</p>
-               <p className="text-2xl pt-1 pb-14 font-bold">599 СОМ</p>
-               <Button classes={'px-14'} />
-            </div>
-         </SwiperSlide>
-         <SwiperSlide>
-            <div
-               className='flex flex-col items-end h-[50vh] w-[88%] bg-no-repeat bg-contain mx-auto  mt-5'
-               style={{
-                  backgroundImage: `url(${main_bg})`
-               }}>
-               <i className='text-2xl font-medium'>"Филадельфия и лосось"</i>
-               <p className="2xl:text-sm text-xs text-orange-500">1260 грамм 36 кусочек </p>
-
-               <p className="pt-16 font-medium"><p className="block w-[110%] h-[8%] bg-orange-500 translate-y-4 -rotate-12"></p> 1599 СОМ</p>
-               <p className="text-2xl pt-1 pb-14 font-bold">599 СОМ</p>
-               <Button classes={'px-14'} />
-            </div>
-         </SwiperSlide>
-         <SwiperSlide>
-            <div
-               className='flex flex-col items-end h-[50vh] w-[88%] bg-no-repeat bg-contain mx-auto  mt-5'
-               style={{
-                  backgroundImage: `url(${main_bg})`
-               }}>
-               <i className='text-2xl font-medium'>"Филадельфия и лосось"</i>
-               <p className="2xl:text-sm text-xs text-orange-500">1260 грамм 36 кусочек </p>
-
-               <p className="pt-16 font-medium"><p className="block w-[110%] h-[8%] bg-orange-500 translate-y-4 -rotate-12"></p> 1599 СОМ</p>
-               <p className="text-2xl pt-1 pb-14 font-bold">599 СОМ</p>
-               <Button classes={'px-14'} />
-            </div>
-         </SwiperSlide>
-         <SwiperSlide>
-            <div
-               className='flex flex-col items-end h-[50vh] w-[88%] bg-no-repeat bg-contain mx-auto  mt-5'
-               style={{
-                  backgroundImage: `url(${main_bg})`
-               }}>
-               <i className='text-2xl font-medium'>"Филадельфия и лосось"</i>
-               <p className="2xl:text-sm text-xs text-orange-500">1260 грамм 36 кусочек </p>
-
-               <p className="pt-16 font-medium"><p className="block w-[110%] h-[8%] bg-orange-500 translate-y-4 -rotate-12"></p> 1599 СОМ</p>
-               <p className="text-2xl pt-1 pb-14 font-bold">599 СОМ</p>
-               <Button classes={'px-14'} />
-            </div>
-         </SwiperSlide>
+         {sliders.map(item => {
+            return (
+               <SwiperSlide>
+                  <div
+                     className='mainPageSlider'
+                     style={{
+                        backgroundImage: `url(${item.img})`
+                     }}>
+                     <div className="flex flex-col items-end">
+                        <i className='mainPageSliderTitle'>{item.title}</i>
+                        <p className="2xl:text-sm text-xs text-orange-500 pt-2">{item.slice}</p>
+                     </div>
+                     <div className="flex flex-col items-end">
+                        <p className="font-medium"><span className="mainPageSliderPrice"></span>{item.price}</p>
+                        <p className=" mainPageSliderSale">{item.sale}</p>
+                     </div>
+                     <Button classes={'px-14 mb-5'} />
+                  </div>
+               </SwiperSlide>
+            )
+         })}
       </Swiper>
    )
 }

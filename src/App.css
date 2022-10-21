@@ -3,16 +3,32 @@
 @tailwind utilities;
 
 @layer components {
-  .sidebarLink{
+  .sidebarLink {
     @apply 2xl:text-2xl text-base font-normal
   }
 
-  .sidebarLinkDiv{
+  .sidebarLinkDiv {
     @apply flex justify-center 2xl:gap-5 gap-3 2xl:pb-7 pb-3
+  }
+
+  .mainPageSlider {
+    @apply flex flex-col justify-between items-end h-[50vh] w-[88%] bg-no-repeat bg-contain mx-auto mt-5
+  }
+
+  .mainPageSliderPrice {
+    @apply block w-[110%] h-[8%] bg-orange-500 translate-y-4 -rotate-12 font-bold
+  }
+
+  .mainPageSliderTitle{
+    @apply 2xl:text-4xl xl:text-2xl lg:text-xl text-xl font-medium
+  }
+
+  .mainPageSliderSale{
+    @apply xl:text-2xl lg:text-lg text-base 2xl:text-3xl font-bold my-4
   }
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -29,6 +45,10 @@ html{
 
 .bg-gray {
   background-color: rgba(242, 242, 242, 1);
+}
+
+.mySwiper{
+  height: 25% !important;
 }
 
 .swiper {
@@ -49,6 +69,7 @@ html{
   margin: auto;
 
 }
+
 .primary-navigation ul li {
   list-style: none;
   margin: 0 auto;
@@ -58,17 +79,21 @@ html{
   text-decoration: none;
   text-align: center;
 }
+
 .primary-navigation li p {
   color: black;
   font-size: 20px;
-  font-weight:semibold;
+  font-weight: semibold;
 }
+
 .primary-navigation li p:hover {
   color: orange;
 }
+
 .primary-navigation li:hover {
   cursor: pointer;
 }
+
 .primary-navigation ul li ul {
   visibility: hidden;
   opacity: 0;
@@ -78,7 +103,8 @@ html{
   display: none;
   background: white;
 }
-.primary-navigation ul li:hover > ul,
+
+.primary-navigation ul li:hover>ul,
 .primary-navigation ul li ul:hover {
   visibility: visible;
   opacity: 1;
@@ -88,18 +114,20 @@ html{
   padding-top: 20px;
   box-shadow: 0px 3px 5px -1px #ccc;
 }
+
 .primary-navigation ul li ul li {
   clear: both;
   width: 100%;
   text-align: left;
   margin-bottom: 20px;
   border-style: none;
-  color:black;
+  color: black;
 }
+
 .primary-navigation ul li ul li:hover {
   padding-left: 10px;
   border-left: 2px solid orangered;
-  color:orangered;
+  color: orangered;
   transition: all 0.3s ease;
 }
 
@@ -107,7 +135,7 @@ li:hover {
   color: orangered;
 }
 
-ul li ul li{
+ul li ul li {
   transition: all 0.5s ease;
 }
 
@@ -180,10 +208,6 @@ ul li ul li{
   height: 10px !important;
   font-size: 1.8rem !important;
   color: black !important;
-  /* transform: translateX(300%); */
-  /* z-index: 90000 !important;
-  position:absolute !important;
-  left: 210% !important; */
 }
 
 .swiper-button-next:after,

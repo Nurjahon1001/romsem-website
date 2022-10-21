@@ -43,13 +43,13 @@ function Navbar() {
       </div>
       <div className="flex lg:gap-x-6 items-center md:gap-12 sm:gap-x-10 mobile:gap-6">
         <div className="text-center">
-          <p className="xl:text-lg text-sm">Наш телефон</p>
-          <p className="text-orange-500 text-sm">+996 705 188 955</p>
-          <p className="text-orange-500 text-sm">+996 555 188 955</p>
+          <p className="xl:text-lg text-xs">Наш телефон</p>
+          <p className="text-orange-500 sm:text-sm text-[8px]">+996 705 188 955</p>
+          <p className="text-orange-500 sm:text-sm text-[8px]">+996 555 188 955</p>
         </div>
         <div className=" w-28 mobile:w-20 flex-col justify-center align-center text-center">
           <div className="flex justify-center text-center"><img src={clock} alt="clock" className="w-4 h-4" /></div>
-          <p className="text-neutral-400">работаем с 10:00 до 00:00</p>
+          <p className="text-neutral-400 text-xs">работаем с 10:00 до 00:00</p>
         </div>
       </div>
       <img className="sm:w-12 sm:h-12 mobile:w-10 mobile:h-10" src={Group} alt="" />
