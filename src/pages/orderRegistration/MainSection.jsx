@@ -84,19 +84,15 @@ function MainSection() {
                             <div className="grid lg:grid-cols-4 grid-cols-2  gap-x-5 justify-between">
                                 <div className="mb-5">
                                     <input type="text" placeholder='Кв' className='rounded w-full p-2.5' />
-
                                 </div>
                                 <div className="mb-5">
                                     <input type="text" placeholder='Подъезд' className='rounded w-full p-2.5' />
-
                                 </div>
                                 <div className="mb-5">
                                     <input type="text" placeholder='Этаж' className='rounded w-full p-2.5' />
-
                                 </div>
                                 <div className="mb-5">
                                     <input type="text" placeholder='Код' className='rounded w-full p-2.5' />
-
                                 </div>
                             </div>
                             <div className="flex mb-5">

@@ -10,7 +10,7 @@ export default function Goods() {
   const { isShowBasket } = useContext(ThemeContext)
 
   return (
-    <div className='flex'>
+    <div className='flex lg:gap-0 gap-2'>
       <Sidebar />
       <GoodsMain/>
       <ThirdCol/>

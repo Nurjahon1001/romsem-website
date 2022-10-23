@@ -7,7 +7,7 @@ import Footer from "../../../components/Footer";
 
 export default function Slider() {
   return (
-    <div className="2xl:w-[70%] w-[63%]  mx-auto bg-gray">
+    <div className="2xl:w-[70%] sm:w-[63%] w-[100%] mx-auto bg-gray">
       <Navbar/>
       <MainSection/>
       <Cards/>

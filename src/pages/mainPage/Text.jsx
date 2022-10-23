@@ -3,7 +3,7 @@ import arrowDown from '../../images/desktop/desktop-goods/arrowDown.png'
 
 const Text = () => {
    return (
-      <div className='text-gray-400 text-xs w-[85%] mx-auto mt-10'>
+      <div className='text-gray-400 text-xs sm:w-[85%] w-[96%] mx-auto sm:mt-10 mt-2'>
          <p className='2xl:text-2xl text-lg font-semibold mb-2'>Заказать суши в Бишкеке</p>
          <p>Ресторан “Суши и Лапша” предлагаем своим клиентам самые вкусные суши с доставкой на дом, приготовленные по классическим и адаптированным к европейской аудитории рецептам, а также собственным наработкам наших поваров. Мы ценим время наших клиентов, поэтому вы можете заказать суши в Харькове с доставкой на дом или в офис.
             <ul className='list-disc my-2'>

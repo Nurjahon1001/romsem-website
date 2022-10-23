@@ -12,7 +12,7 @@
   }
 
   .mainPageSlider {
-    @apply flex flex-col justify-between items-end h-[50vh] w-[88%] bg-no-repeat bg-contain mx-auto mt-5
+    @apply flex flex-col justify-between items-end w-[85%] h-[90%] lg:bg-contain md:bg-[length:350px_200px] sm:bg-[length:250px_120px] bg-no-repeat  sm:bg-center bg-bottom mx-auto mt-5
   }
 
   .mainPageSliderPrice {
@@ -20,11 +20,15 @@
   }
 
   .mainPageSliderTitle{
-    @apply 2xl:text-4xl xl:text-2xl lg:text-xl text-xl font-medium
+    @apply 2xl:text-4xl xl:text-3xl lg:text-xl sm:text-xl text-sm font-medium
   }
 
   .mainPageSliderSale{
     @apply xl:text-2xl lg:text-lg text-base 2xl:text-3xl font-bold my-4
+  }
+
+  .socialMedia{
+    @apply opacity-25 hover:opacity-100 transition ease-in-out duration-75
   }
 }
 
@@ -47,9 +51,9 @@ html {
   background-color: rgba(242, 242, 242, 1);
 }
 
-.mySwiper{
+/* .mySwiper{
   height: 25% !important;
-}
+} */
 
 .swiper {
   width: 85%;

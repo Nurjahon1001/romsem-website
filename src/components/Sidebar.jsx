@@ -16,12 +16,12 @@ import Aksii from '../images/desktop/desktop-home-page/aksii.png'
 
 function sidebar() {
    return (
-      <div className='2xl:w-[10%] lg:w-[12%] md:w-[16%] w-[20%] flex flex-col items-center mt-6 text-center'>
-         <div className='flex flex-col items-center w-[100%]'>
+      <div className='2xl:w-[10%] lg:w-[12%] md:w-[16%] w-[22%] sm:flex flex-col items-center mt-6 text-center hidden'>
+         <div className='flex flex-col items-center md:w-[100%] w-[70%]'>
             <Link to="/">
                <img src={Logo} alt="Logo" />
             </Link>
-            <img className='2xl:py-7 lg:py-4' src={Line} alt="line" />
+            <img className='2xl:py-7 py-4' src={Line} alt="line" />
          </div>
          <div className='flex flex-col justify-end items-start'>
             <div className={'sidebarLinkDiv'}>
@@ -30,7 +30,7 @@ function sidebar() {
             </div>
             <div className={'sidebarLinkDiv'}>
                <img src={Seti} alt="Seti" />
-               <Link to="/goods" className='sidebarLink'>Сеты</Link>
+               <Link to="goods" className='sidebarLink'>Сеты</Link>
                <Link to="/"><span className='sidebarLink'></span></Link>
             </div>
             <div className={'sidebarLinkDiv'}>
@@ -55,7 +55,7 @@ function sidebar() {
             </div>
             <div className={'sidebarLinkDiv'}>
                <img src={Korn_dogi} alt="pizza" />
-               <Link to="/" className='sidebarLink'>Корн доги</Link>
+               <Link to="/" className='sidebarLink  flex-none'>Корн доги</Link>
             </div>
             <div className={'sidebarLinkDiv'}>
                <img src={Napitki} alt="pizza" />
