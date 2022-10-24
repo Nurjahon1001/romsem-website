@@ -65,10 +65,6 @@ function App() {
     });
   };
 
-  // manashu codelarni o'zingiz yozdingizmi 
-  // ha o'zim ko'chirib yozdim)
-  // haa tushunarli
-
   return (
     <div className="App">
       <div className='wrapper'>
