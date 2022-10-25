@@ -13,7 +13,7 @@ import FirstCard from "./FirstCard";
 import SecondCard from "./SecondCard";
 import ThirdCard from "./ThirdCard";
 
-export default function GoodscardCards() {
+export default function DetailPage() {
    return (
       <div className="w-[85%] mx-auto mb-10">
          <p className="2xl:text-2xl text-xl font-medium text-center my-4">Рекомендуем к этому товару</p>
