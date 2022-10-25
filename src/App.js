@@ -28,6 +28,7 @@ function App() {
   // };
 
   //Handle Remove from cart
+  
   // const handleRemoveFromCart = (id) => {
   //   setCart((prev) => {
   //     return prev.reduce((cal, item) => {
