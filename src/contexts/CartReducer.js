@@ -3,6 +3,7 @@ import {
    ADD_TO_CART,
    INCREASE,
    DECREASE,
+   CLEAR,
    CHECKOUT
 } from './ActionTypes.js'
 
@@ -53,16 +54,13 @@ const CartReducer = (state, action) => {
          };
 
       case INCREASE:
-         state.cartItems[
-            state.cartItems.findIndex((item) => {
-               return +item.id === +action.payload.id
-            })
-         ].quantity += 1;
-         console.log(state.cartItems[
-            state.cartItems.findIndex((item) => {
-               return +item.id === +action.payload.id
-            })
-         ]);
+         state.cartItems = state.cartItems.map((prod) => {
+            if (prod.id === action.payload.id) {
+               prod.quantity = action.payload.quantity;
+               return prod;
+            }
+            return prod;
+         })
          return {
             ...state,
             ...sumItems(state.cartItems),
@@ -70,13 +68,23 @@ const CartReducer = (state, action) => {
          };
 
       case DECREASE:
-         state.cartItems[
-            state.cartItems.findIndex((item) => item.id === action.payload.id)
-         ].quantity--;
+         state.cartItems = state.cartItems.map((prod) => {
+            if (prod.id === action.payload.id) {
+               prod.quantity = action.payload.quantity;
+               return prod;
+            }
+            return prod;
+         })
          return {
             ...state,
             ...sumItems(state.cartItems),
             cartItems: [...state.cartItems],
+         };
+
+      case CLEAR:
+         return {
+            cartItems: [],
+            ...sumItems([]),
          };
 
       case CHECKOUT:

@@ -8,6 +8,7 @@ import img7 from '../../images/desktop/desktop-goods/7.png'
 import img8 from '../../images/desktop/desktop-goods/10.png'
 import img9 from '../../images/desktop/desktop-goods/9.png'
 
+
 export const defaultProducts = [
    { id: 2, img: img2, title: "Сет '5 Филадельфий'", weight: "1272", slice: "36", price: 1499 },
    { id: 3, img: img3, title: "Саломон сет", weight: "1189", slice: "30", price: 1489 },

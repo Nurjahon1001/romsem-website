@@ -16,7 +16,7 @@ import Aksii from '../images/desktop/desktop-home-page/aksii.png'
 
 function sidebar() {
    return (
-      <div className='2xl:w-[10%] lg:w-[12%] md:w-[16%] w-[22%] sm:flex flex-col items-center mt-6 text-center hidden'>
+      <div className='max-w-sm sm:flex flex-col items-center mt-6 text-center hidden'>
          <div className='flex flex-col items-center md:w-[100%] w-[70%]'>
             <Link to="/">
                <img src={Logo} alt="Logo" />

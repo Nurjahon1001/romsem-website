@@ -6,9 +6,9 @@ import logotablet from "../images/desktop/desktop-home-page/logotablet.svg"
 function Navbar() {
   return (
   <div className="font-serif">
-    <div className=" 2xl:text-lg lg:text-sm sm:flex bg-gray mx-auto justify-between items-center xl:px-4 lg:px-2 border-b border-gray-300 hidden">
+    <div className="2xl:text-lg lg:text-sm sm:flex bg-gray mx-auto justify-between items-center lg:px-3 border-b border-gray-300 hidden">
       <div className="flex items-center lg:gap-x-7">
-      <div className="text-center px-4 border-r  border-gray-300">
+      <div className="text-center px-4 border-r border-gray-300">
         <p className= "lg:text-base md:text-sm sm:text-xs">Наш телефон</p>
         <p className="text-orange-400 sm:text-xs">+996 705 188 955</p>
         <p className="text-orange-400 sm:text-xs">+996 555 188 955</p>
@@ -18,15 +18,15 @@ function Navbar() {
         </div>
       </div>
       <div className="pl-1">
-          <p className="text-light text-gray-400  lg:text-base md:text-sm sm:text-xs">Город:</p>
-          <p className= "lg:text-base md:text-sm sm:text-xs">Бишкек</p>
+          <p className="text-light text-gray-400 lg:text-base md:text-sm sm:text-xs">Город:</p>
+          <p className="lg:text-base md:text-sm sm:text-xs">Бишкек</p>
       </div>
       </div>
       <div className="flex justify-between items-center">
         <div className="flex lg:justify-between lg:gap-x-8 md:gap-4 items-center">
           <div className="flex flex-col mx-3 gap-x-2.5">
-            <Link className="hover:text-orange-600  lg:text-base md:text-sm sm:text-xs" to="/review">Отзывы</Link>
-            <Link className="hover:text-orange-600  lg:text-base md:text-sm sm:text-xs" to="/order">Доставка и оплата</Link>
+            <Link className="hover:text-orange-600 lg:text-base md:text-sm sm:text-xs" to="/review">Отзывы</Link>
+            <Link className="hover:text-orange-600 lg:text-base md:text-sm sm:text-xs" to="/order">Доставка и оплата</Link>
           </div>
           <div className="mr-3">
             <img src={Group} alt="" />

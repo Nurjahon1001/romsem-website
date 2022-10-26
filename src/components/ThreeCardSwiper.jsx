@@ -9,8 +9,8 @@ import { Pagination, Navigation, Mousewheel, Keyboard } from "swiper";
 import Card from "../components/Card";
 import { defaultProducts } from '../constants/data/defaultProducts';
 
-
 const ThreeCardSwiper = () => {
+
    return (
       <Swiper
          slidesPerView={3}

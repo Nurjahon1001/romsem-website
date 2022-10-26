@@ -7,9 +7,7 @@ import ReviewMain from './ReviewMainSection'
 export default function Goods() {
   return (
     <div className='flex'>
-      <Sidebar />
       <ReviewMain/>
-      <ThirdCol />
     </div>
   )
 }

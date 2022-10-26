@@ -4,7 +4,7 @@ import { AiFillPlusCircle } from 'react-icons/ai';
 import CartContext from '../../contexts/CartContext';
 
 function CartProduct({item}) {
-   const { removeFromCart, increase, decrease, cartItems } = useContext(CartContext);
+   const { removeFromCart, increase, decrease} = useContext(CartContext);
    return (
       <div key={item.id} className="text-center w-full flex flex-col items-center">
          <div>
@@ -20,13 +20,13 @@ function CartProduct({item}) {
          <div className="flex items-center my-3">
             <div className='flex items-center'>
                {item.quantity > 1 && (
-                  <button onClick={() => decrease(item)}>
+                  <button onClick={() => decrease({...item, quantity: item.quantity -= 1})}>
                      <AiOutlineMinusCircle className='text-3xl' />
                   </button>
                )}
                <span className='text-xl font-bold mx-2'>{item.price} COM</span>
                <button
-                  onClick={() => increase(item)}
+                  onClick={() => increase({...item, quantity: item.quantity += 1})}
                >
                   <AiFillPlusCircle className='text-3xl text-orange-500' />
                </button>

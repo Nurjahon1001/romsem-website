@@ -5,9 +5,9 @@ import Plus from '../images/mobile/Group 15.png'
 
 function Basket() {
     return (
-        <div className='lg:h-screen flex flex-col justify-between' style={{ paddingRight: '74px' }}>
-            <div className='hidden lg:block' style={{ paddingTop: '59px', paddingLeft: '66px' }}>
-                <button className='text-2xl text-medium text-black py-2.5  px-24' style={{ background: '#f2f2f2', borderRadius: '5px' }}>Корзина</button>
+        <div className='lg:h-screen flex flex-col justify-between pr-16'>
+            <div className='hidden lg:block pt-14 pl-16'>
+                <button className='text-2xl text-medium text-black py-2.5 bg-slate-100 rounded-md px-24'>Корзина</button>
                 <div className="flex mt-2.5 gap-x-7">
                     <div>
                         <img src={FirstImage} className="w-full" alt="sushi" />
@@ -18,43 +18,35 @@ function Basket() {
                             <div className='flex items-center'>
                                 <img src={Vector} alt="vector" />
                                 <span className='text-lg font-bold mx-2'>10</span>
-                                <img src={Plus} style={{ width: '19.28px', height: '19.28px' }} alt="plus" />
+                                <img src={Plus} className="w-5 h-5" alt="plus" />
                             </div>
-
                             <span className='text-lg font-bold'>170 СОМ</span>
                         </div>
                     </div>
                 </div>
             </div>
             <div className='mb-9'>
-                <div style={{maxWidth:"343px"}} className='w-full mx-auto lg:mx-0'>
-                    <div className="flex justify-between" style={{ paddingLeft: '66px' }}>
+                <div  className='max-w-sm mx-auto lg:mx-0 border-b-2'>
+                    <div className="flex justify-between pl-16">
                       <p className="text-lg font-medium">1 товар</p>
                       <p className="text-lg font-medium">170 СОМ</p>  
                     </div>
-                    <div style={{ background: '#A4ACAD', height: '.5px', width: '330px' }} className='my-2'>
-                    </div>
                 </div>
-                <div style={{maxWidth:"343px"}} className='w-full mx-auto lg:mx-0'>
-                    <div className="flex justify-between" style={{ paddingLeft: '66px' }}>
+                <div className='border-b-2 max-w-sm mx-auto lg:mx-0'>
+                    <div className="flex justify-between pl-16">
                       <p className="text-lg font-medium">Скидка</p>
-                      <p className="text-lg font-medium">0 СОМ</p>  
+                      <p className="text-lg font-medium ">0 СОМ</p>  
 
                     </div>
-                    <div style={{ background: '#A4ACAD', height: '.5px', width: '330px' }} className='my-2'>
-                    </div>
                 </div>
-                <div style={{maxWidth:"343px"}} className='w-full mx-auto lg:mx-0'>
-                    <div className="flex justify-between" style={{ paddingLeft: '66px' }}>
+                <div className='border-b-2 max-w-sm mx-auto lg:mx-0'>
+                    <div className="flex justify-between pl-16">
                       <p className="text-lg font-medium">Доставка</p>
                       <p className="text-lg font-medium">Бесплатно</p>  
-
-                    </div>
-                    <div style={{ background: '#A4ACAD', height: '.5px', width: '330px' }} className='my-2'>
                     </div>
                 </div>
-                <div style={{maxWidth:"343px"}} className='w-full mx-auto lg:mx-0'>
-                    <div className="flex justify-between" style={{ paddingLeft: '66px', color:'#FF9846' }}>
+                <div className='border-b-2 max-w-sm mx-auto lg:mx-0'>
+                    <div className="flex justify-between pl-16 text-orange-500">
                       <p className="text-lg font-medium">Доставка</p>
                       <p className="text-lg font-medium">Бесплатно</p>  
 
