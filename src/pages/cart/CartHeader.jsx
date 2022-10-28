@@ -6,12 +6,12 @@ function CartHeader() {
    const { cartItems, setIsShowBasket } = useContext(CartContext)
 
    return (
-      <div className='w-[12%] flex gap-3 bg-orange-400 text-white justify-center items-center fixed'>
-         <h1 className="text-white text-4xl py-3 text-center font-bold ">Cart</h1>
+      <div className='sm:w-[12%] sm:px-14 px-20 flex gap-3 bg-orange-400 text-white justify-center items-center fixed right-0'>
+         <h1 className="text-white sm:text-4xl text-2xl p-2 text-center font-bold ">Корзина</h1>
          <div className='flex gap-2' onClick={() => setIsShowBasket(true)}>
-            <AiOutlineShoppingCart className="text-[40px] cursor-pointer hover:opacity-60" />
+            <AiOutlineShoppingCart className="sm:text-4xl text-3xl cursor-pointer hover:opacity-60" />
             {cartItems.length > 0 && (
-               <span className="bg-orange-500 text-white w-7 h-7 grid items-center rounded-full -translate-y-3 -translate-x-6 text-center leading-5 ">
+               <span className="bg-orange-500 text-white w-6 h-6 grid items-center rounded-full -translate-y-3 -translate-x-6 text-center leading-5 ">
                   {cartItems.length}
                </span>
             )}

@@ -1,14 +1,21 @@
 import React, { useContext, useReducer } from 'react';
 import { BsChevronDown } from 'react-icons/bs'
 import SortReducer from '../contexts/SortReducer';
+import {HiBars3CenterLeft} from 'react-icons/hi2'
 
 
 const Dropdown = () => {
    const [state,dispatch] = useReducer(SortReducer)
    return (
-      <div className='primary-navigation sm:bg-transparent rounded-lg bg-gray-900 w-full '>
+      <div className='primary-navigation sm:bg-transparent rounded-lg w-full '>
          <ul>
-            <li><span className="flex gap-4 items-center font-semibold md:text-xl sm:text-base text-3xl py-2 sm:px-6">Сортировка <BsChevronDown /></span>
+            <li className='w-full px-4'>
+               <span className="flex gap-4 items-center justify-between font-semibold md:text-xl sm:text-base text-2xl py-2 sm:px-6">
+                  <span className='flex gap-3 items-center'>
+                     <HiBars3CenterLeft classname="sm:hidden block"/> Сортировка
+                  </span> 
+                     <BsChevronDown />
+               </span>
                <ul className="dropdown">
                   <li onClick={() => dispatch({ type: "SORT_BY_TITLE" })}>Название</li>
                   <li onClick={() => dispatch({ type: "DESCEND" })}>Сначала дешевле</li>

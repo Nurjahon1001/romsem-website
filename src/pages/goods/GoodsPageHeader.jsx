@@ -1,27 +1,11 @@
-import React, { useContext, useEffect, useState } from 'react';
-import useLocalStorage from "../../hooks/useLocalStorage";
+import React, { useContext} from 'react';
 import setiGoods from '../../images/desktop/desktop-goods/goodsSeti.png'
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import CartContext from '../../contexts/CartContext';
 
 const GoodsPageHeader = () => {
 
-  const { cartItems, checkout, clearCart, setIsShowBasket } = useContext(CartContext);
-  const [toggle, setToggle] = useState(false);
-  const [innerWidth, setInnerWidth] = useState(window.innerWidth);
-
-  // Get Screen Size
-  useEffect(() => {
-    const changeWidth = () => {
-      setInnerWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", changeWidth);
-
-    return () => {
-      window.removeEventListener("resize", changeWidth);
-    };
-  }, []);
+  const { cartItems, setIsShowBasket } = useContext(CartContext);
 
    return (
       <div className='flex gap-3 items-center py-5'>

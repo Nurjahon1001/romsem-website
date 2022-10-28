@@ -4,15 +4,17 @@ import Image2 from '../../images/desktop/Vector10.svg'
 import Tick from '../../images/desktop/Group 13 (4).png'
 import Vector from '../../images/mobile/Vector 11.svg'
 import Plus from '../../images/mobile/Group 15.png'
-function MainSection() {  
-    return (
-        <div style={{ background: '#E5E5E5' }} className='md:h-screen py-14'>
+import Navbar from '../../components/Navbar'
+function MainSection() {
+    return (<>
+        <Navbar className="sm:hidden block bg-white"/>
+        <div className='md:h-screen sm:py-14 py-3 px-5 bg-gray'>
             <div className='mx-auto max-w-3xl'>
-                <p className="text-2xl font-medium">Ваши данные</p>
-                <form className='mt-8'>
+                <p className="text-2xl font-medium sm:text-start text-center">Ваши данные</p>
+                <form className='sm:mt-8 mt-3'>
                     <div className="lg:flex lg:gap-x-10">
                         <div className='lg:basis-3/5'>
-                            <div className='flex gap-5'>
+                            <div className='flex sm:gap-5 gap-2'>
                                 <div className="mb-5 w-full">
                                     <input type="text" className='rounded p-2.5 w-full' placeholder='Телефон' />
                                 </div>
@@ -21,7 +23,7 @@ function MainSection() {
                                 </div>
                             </div>
                             <div className="flex mb-5">
-                                <button style={{ background: '#FF9846' }} className='flex w-1/2 px-5 gap-3 py-2.5 items-center text-white rounded-tl-md rounded-bl-md'>
+                                <button className='flex w-1/2 bg-orange-400 px-5 gap-3 py-2.5 items-center text-white rounded-tl-md rounded-bl-md'>
                                     <img src={Image2} alt="frame" />
                                     Наличными
                                 </button>
@@ -32,30 +34,30 @@ function MainSection() {
 
                             </div>
                             <div className="mb-5 flex justify-between ">
-                                <label htmlFor="sum" className=' flex items-center gap-x-2.5'>
+                                <label htmlFor="sum" className=' flex items-center gap-x-2'>
                                     <img src={Tick} className='w-5 h-5' alt="tick" />
                                     <span className="lg:text-lg">Подготовить сдачу с</span>
                                 </label>
-                                <input type="text" id='sum' className='lg:w-32  rounded p-2.5 h-10' placeholder='Сумма' />
+                                <input type="text" id='sum' className='w-28 rounded p-2.5 h-10' placeholder='Сумма' />
                             </div>
                             <div className="mb-5">
                                 <input type="text" className='rounded p-2.5 w-full' placeholder='Комменатрий к заказу' />
                             </div>
                             <div className="mb-5">
                                 <div className="flex justify-between">
-                                    <p className='text-lg font-medium'>Палочки + соусник обычные</p>
+                                    <p className='sm:text-lg text-base font-medium'>Палочки + соусник обычные</p>
                                     <div className='flex items-center'>
                                         <img src={Vector} alt="vector" />
                                         <span className='text-lg font-bold mx-2'>10</span>
-                                        <img src={Plus} style={{ width: '19.28px', height: '19.28px' }} alt="plus" />
+                                        <img src={Plus} className="w-4" alt="plus" />
                                     </div>
                                 </div>
                                 <div className="flex justify-between">
-                                    <p className='text-lg font-medium'>Палочки + соусник обычные</p>
+                                    <p className='sm:text-lg text-base font-medium'>Палочки + соусник обычные</p>
                                     <div className='flex items-center'>
                                         <img src={Vector} alt="vector" />
                                         <span className='text-lg font-bold mx-2'>10</span>
-                                        <img src={Plus} style={{ width: '19.28px', height: '19.28px' }} alt="plus" />
+                                        <img src={Plus} className="w-4" alt="plus" />
                                     </div>
                                 </div>
                             </div>
@@ -66,10 +68,10 @@ function MainSection() {
 
                         <div className='lg:basis-2/5'>
                             <div className="flex mb-5">
-                                <button style={{ background: '#FF9846', paddingLeft: '52px', paddingRight: '52px' }} className='w-1/2 text-center gap-3 py-2.5  text-white rounded-tl-md rounded-bl-md'>
+                                <button className='w-1/2 px-12 bg-orange-400 text-center gap-3 py-2.5  text-white rounded-tl-md rounded-bl-md'>
                                     Курьером
                                 </button>
-                                <button style={{ paddingLeft: '42px', paddingRight: '42px' }} className='w-1/2  gap-3 py-2.5  text-center  rounded-tr-md rounded-br-md bg-white'>
+                                <button className='w-1/2 gap-3 px-10 py-2.5  text-center  rounded-tr-md rounded-br-md bg-white'>
                                     Самовывоз
                                 </button>
                             </div>
@@ -96,10 +98,10 @@ function MainSection() {
                                 </div>
                             </div>
                             <div className="flex mb-5">
-                                <button style={{ background: '#FF9846', paddingLeft: '52px', paddingRight: '52px' }} className='w-1/2 text-center gap-3 py-2.5  text-white rounded-tl-md rounded-bl-md'>
+                                <button className='w-1/2 sm:px-12 bg-orange-400 text-center gap-3 py-2.5 text-white rounded-tl-md rounded-bl-md'>
                                     На сейчас
                                 </button>
-                                <button style={{ paddingLeft: '42px', paddingRight: '42px' }} className='w-1/2  gap-3 py-2.5  text-center  rounded-tr-md rounded-br-md bg-white'>
+                                <button className='w-1/2 gap-3 px-10 py-2.5 text-center rounded-tr-md rounded-br-md bg-white'>
                                     На время
                                 </button>
                             </div>
@@ -109,14 +111,16 @@ function MainSection() {
                         </div>
                     </div>
                     <div className="my-3">
-                        <button style={{ background: '#F46D40'}} className='p-2.5 text-white w-full rounded font-medium text-lg'>Оформить заказ</button>
+                        <button className='p-2.5 bg-orange-500 text-white w-full rounded font-medium text-lg'>Оформить заказ</button>
                     </div>
-                    <p className="mb-5 text-sm text-center">
+                    <p className="mb-5 text-sm text-center sm:block hidden">
                         Нажимая на кнопку Оформить заказ, Вы подтверждаете свое согласие на обработку персональных данных в соответствии с <u>Публичной оффертой</u>
                     </p>
                 </form>
             </div>
         </div>
+    </>
+
     )
 }
 

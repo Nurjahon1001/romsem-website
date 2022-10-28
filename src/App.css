@@ -4,7 +4,7 @@
 
 @layer components {
   .sidebarLink {
-    @apply 2xl:text-2xl text-base font-normal
+    @apply 2xl:text-2xl lg:text-base text-sm font-normal
   }
 
   .sidebarLinkDiv {
@@ -28,7 +28,7 @@
   }
 
   .socialMedia{
-    @apply opacity-25 hover:opacity-100 transition ease-in-out duration-75 2xl:w-full w-5/6
+    @apply opacity-25 hover:opacity-100 transition ease-in-out duration-75 2xl:w-full w-4/6
   }
 
   .form-modal{
@@ -77,6 +77,12 @@ html {
   }
 }
 
+@media only screen and (max-width: 640px) {
+  .wrapper {
+    max-width: 100%;
+  }
+}
+
 .bg-gray {
   background-color: rgba(242, 242, 242, 1);
 }
@@ -108,7 +114,7 @@ html {
   list-style: none;
   margin: 0 auto;
   display: inline-block;
-  padding: 0 30px;
+  /* padding: 0 30px; */
   position: relative;
   text-decoration: none;
   text-align: center;

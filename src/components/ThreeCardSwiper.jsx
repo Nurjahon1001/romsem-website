@@ -28,7 +28,7 @@ const ThreeCardSwiper = () => {
          {defaultProducts.map(product => {
             return (
                <SwiperSlide>
-                  <Card product={product} />
+                  <Card product={product} classes={'w-full mt-5'} />
                </SwiperSlide>
             )
          })}

@@ -14,10 +14,10 @@ const SecondGroupCards = () => {
          </div>
          <div className='flex flex-col gap-y-2 sm:gap-y-5 w-1/2'>
             <div className='flex justify-between gap-3 sm:gap-x-1'>
-               <img className='2xl:w-full w-[48%]' src={Img3} alt="meal" />
-               <img className='2xl:w-full w-[48%]' src={Img4} alt="meal" />
+               <img className='2xl:w-full w-6/12' src={Img3} alt="meal" />
+               <img className='2xl:w-full w-6/12' src={Img4} alt="meal" />
             </div>
-            <img className='2xl:w-[100%]' src={Img5} alt="meal" />
+            <img className='2xl:w-full' src={Img5} alt="meal" />
          </div>
       </div>
    );

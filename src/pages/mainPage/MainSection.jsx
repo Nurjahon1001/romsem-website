@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Link} from "react-router-dom"
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -34,7 +35,7 @@ export default function MainSection() {
 
    return (
       <>
-         <div className="xl:h-[23%] lg:h-[20%] md:h-[18%] sm:h-[15%] sm:block hidden">
+         <div className="max-w-6xl xl:h-[23%] lg:h-[20%] md:h-[18%] sm:h-[15%] sm:block hidden">
             <Swiper
                cssMode={true}
                navigation={true}
@@ -69,9 +70,9 @@ export default function MainSection() {
                })}
             </Swiper>
          </div>
-         <div className="sm:hidden flex flex-wrap justify-around items-center gap-x-2 gap-y-2 w-[96%] mx-auto mt-3">
+         <div className="sm:hidden flex flex-wrap justify-around items-center gap-x-2 gap-y-2 w-full px-3 mt-3">
             <img src={img1} alt="img" />
-            <img src={img2} alt="img" />
+            <Link to="/goods"><img src={img2} alt="img" /></Link>
             <img src={img3} alt="img" />
             <img src={img4} alt="img" />
             <img src={img5} alt="img" />

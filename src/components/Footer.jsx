@@ -7,7 +7,6 @@ import menu from '../images/mobile/mob-home-page/Vector.png'
 import korzina from '../images/mobile/mob-home-page/Frame.png'
 import otziv from '../images/mobile/mob-home-page/Frame (1).png'
 
-
 function Footer() {
   return (
     <div>
@@ -50,9 +49,9 @@ function Footer() {
               <p className='text-sm text-gray-400'>мессенджер для общения</p>
             </div>
             <div className='flex gap-3 flex-row'>
-              <Link><img className='socialMedia w-[70%]' src={telegram} alt="telegram" /></Link>
-              <Link><img className='socialMedia w-[70%]' src={whatsapp} alt="whatsapp" /></Link>
-              <Link><img className='socialMedia w-[70%]' src={instagram} alt="instagram" /></Link>
+              <Link><img className='socialMedia' src={whatsapp} alt="whatsapp" /></Link>
+              <Link><img className='socialMedia' src={telegram} alt="telegram" /></Link>
+              <Link><img className='socialMedia' src={instagram} alt="instagram" /></Link>
             </div>
           </div>
           <div className='flexItemsCenter'>
@@ -61,7 +60,7 @@ function Footer() {
             <p className='text-sm text-gray-400'>Адрес:Бакаева 126</p>
           </div>
         </div>
-        <div className='sm:hidden flex items-center justify-around p-5'>
+        <div className='sm:hidden flex items-center justify-around py-5 px-10'>
           <div className='flexItemsCenter'>
             <img src={menu} alt="" />
             <p className='text-sm'>Меню</p>

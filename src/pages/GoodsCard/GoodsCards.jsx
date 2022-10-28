@@ -12,13 +12,13 @@ import Footer from '../../components/Footer';
 
 const GoodsCards = () => {
    return (
-      <div className='w-[65%] mx-auto bg-gray'>
-         <Navbar/>
-         <div className='flex justify-between mt-5 w-[90%] mx-auto'>
+      <div className='w-2/3 mx-auto bg-gray'>
+         <Navbar />
+         <div className='flex justify-between mt-5 w-11/12 mx-auto'>
             <Link to="/goods">
                <div className='flex gap-2 items-center'>
                   <img src={leftArrow} alt="leftArrow" />
-                  <p>Назад</p>
+                  <Link to="/">Назад</Link>
                </div>
             </Link>
             <div className='flex gap-2 items-center'>
@@ -27,9 +27,9 @@ const GoodsCards = () => {
             </div>
          </div>
          <div className='flex items-center bg-white mt-10'>
-            <img className='w-[50%]' src={goodsCardImg} alt="meal" />
+            <img className='w-1/2' src={goodsCardImg} alt="meal" />
             <div
-               className='h-[50vh] w-[40%] mt-5'>
+               className='h-[50vh] w-1/2 mt-5'>
                <p className='2xl:text-4xl sm:text-3xl text-2xl font-medium'>Филадельфия и лосось сет</p>
                <p className="2xl:text-sm text-xs text-orange-500 mt-1">290 грамм</p>
                <div className='flex gap-3 items-center mt-7'>
@@ -44,7 +44,7 @@ const GoodsCards = () => {
             </div>
          </div>
          <DetailedPageCards />
-         <Footer/>
+         <Footer />
       </div>
    );
 }

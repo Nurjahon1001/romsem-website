@@ -14,17 +14,17 @@ const GoodsMain = () => {
    const { setIsShowBasket} = useContext(CartContext)
 
    return (
-      <div className='sm:w-5/6 w-full sm:mx-auto bg-gray'>
+      <div className='sm:w-11/12 max-w-6xl w-full sm:mx-auto bg-gray'>
          <Navbar />
-         <div className='sm:w-9/12 mx-auto pb-14'>
+         <div className='sm:w-11/12 max-w-4xl mx-auto pb-14'>
             <div className='flex sm:flex-row flex-col justify-between items-center lg:py-5'>
                <GoodsPageHeader setIsShowBasket={setIsShowBasket} />
                <Dropdown />
             </div>
-            <div className='flex flex-wrap gap-y-5 xl:gap-6 md:gap-3 sm:gap-2 justify-center'>
+            <div className='flex flex-wrap sm:gap-y-5 gap-y-2 xl:gap-6 md:gap-3 sm:gap-2 2xl:justify-between justify-around'>
                {defaultProducts.map((product, index) => {
                   return (
-                     <Card key={`card_${index}`} product={product} />
+                     <Card key={`card_${index}`} product={product} classes={' lg:w-[31%] sm:w-5/12 w-full bg-white'}/>
                   )
                })}
             </div>
