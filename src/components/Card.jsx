@@ -6,7 +6,7 @@ import { AiFillPlusCircle } from 'react-icons/ai';
 const Card = ({ product, classes }) => {
    const { addToCart } = useContext(CartContext);
    return (
-      <div className={`bg- sm:p-2 p-4 flex sm:gap-0 gap-4 sm:flex-col sm:justify-between ${classes}`}>
+      <div className={`sm:p-2 p-4 flex sm:gap-0 gap-4 sm:flex-col sm:justify-between ${classes}`}>
          <div className='sm:w-11/12 w-1/3'>
             <img className='w-full' src={product.img} alt="meal" />
          </div>

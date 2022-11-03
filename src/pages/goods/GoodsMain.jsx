@@ -1,6 +1,4 @@
 import React, { useContext } from 'react'
-import { Link } from 'react-router-dom'
-// import { HiBars3CenterLeft } from 'react-icons/all-files/hi/HiBars3CenterLeft'
 import CartContext from '../../contexts/CartContext'
 import Text from '../../pages/mainPage/Text'
 import Navbar from '../../components/Navbar';
@@ -24,7 +22,7 @@ const GoodsMain = () => {
             <div className='flex flex-wrap sm:gap-y-5 gap-y-2 xl:gap-6 md:gap-3 sm:gap-2 2xl:justify-between justify-around'>
                {defaultProducts.map((product, index) => {
                   return (
-                     <Card key={`card_${index}`} product={product} classes={' lg:w-[31%] sm:w-5/12 w-full bg-white'}/>
+                     <Card key={`card_${index}`} product={product} classes={'lg:w-[31%] sm:w-5/12 w-full bg-white'}/>
                   )
                })}
             </div>

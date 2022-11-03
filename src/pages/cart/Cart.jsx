@@ -17,7 +17,7 @@ function Cart() {
          {isShowBasket && (
             <div className='w-full fixed inset-0 bg-[rgba(0,0,0,0.7)]' onClick={() => setIsShowBasket(false)}>
                <div
-                  className='bg-white w-[350px] h-full flex flex-col justify-between absolute right-0 overflow-y-scroll animate-fade-in'
+                  className='bg-white w-[350px] h-full flex flex-col  absolute right-0 overflow-y-scroll animate-fade-in'
                   onClick={e => e.stopPropagation()}>
                   <CartHeader />
                   {cartItems.length === 0 ? (

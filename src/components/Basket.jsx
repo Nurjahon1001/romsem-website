@@ -5,7 +5,7 @@ import Plus from '../images/mobile/Group 15.png'
 
 function Basket() {
     return (
-        <div className='lg:h-screen flex  flex-col justify-between pr-16'>
+        <div className='lg:h-screen flex bg-white flex-col justify-between pr-16'>
             <div className='hidden lg:block pt-14 pl-16'>
                 <button className='text-2xl text-medium text-black py-2.5 bg-slate-100 rounded-md px-24'>Корзина</button>
                 <div className="flex mt-2.5 gap-x-7">

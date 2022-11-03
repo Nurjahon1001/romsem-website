@@ -1,11 +1,4 @@
-import {
-   REMOVE_ITEM,
-   ADD_TO_CART,
-   INCREASE,
-   DECREASE,
-   CLEAR,
-   CHECKOUT
-} from './ActionTypes.js'
+import {ActionTypes} from "./ActionTypes.js";
 
 const Storage = (cartItems) => {
    localStorage.setItem(
@@ -27,6 +20,7 @@ export const sumItems = (cartItems) => {
 };
 
 const CartReducer = (state, action) => {
+  const {REMOVE_ITEM, ADD_TO_CART, INCREASE, DECREASE,CLEAR, CHECKOUT} = ActionTypes
    switch (action.type) {
       case ADD_TO_CART:
          if (!state.cartItems.find((item) => item.id === action.payload.id)) {

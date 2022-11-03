@@ -1,6 +1,4 @@
-import React from 'react'
-import Sidebar from '../../components/Sidebar'
-import ThirdCol from '../mainPage/ThirdCol'
+import React from 'react' 
 import ReviewMain from './ReviewMainSection'
 
 

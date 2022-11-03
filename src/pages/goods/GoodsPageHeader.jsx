@@ -8,7 +8,7 @@ const GoodsPageHeader = () => {
   const { cartItems, setIsShowBasket } = useContext(CartContext);
 
    return (
-      <div className='flex gap-3 items-center py-5'>
+      <div className='flex gap-3 justify-center items-center py-5'>
          <img src={setiGoods} alt="settings" />
          <p className='lg:text-2xl sm:text-xl text-3xl font-medium'>Сеты</p>
          <div className="flex gap-2 justify-end" onClick={() => setIsShowBasket(true)} style={{ background: '#f2f2f2', borderRadius: '5px' }}>

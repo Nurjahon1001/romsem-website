@@ -16,7 +16,7 @@ import Card from "../../components/Card";
 
 export default function DetailPage() {
 
-   const [detailedCards, setDetailedCards] = useState([
+   const [detailedCards ] = useState([
       { id: 1, img: img1, title: 'Банзай', price: '140', plusBtn:'plus'},
       { id: 2, img: img2, title: 'Филадельфия', price: '170', plusBtn:'plus'},
       { id: 3, img: img3, title: 'Аригато', price: '140', plusBtn:'plus'},
